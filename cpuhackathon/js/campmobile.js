@@ -188,11 +188,12 @@ $(document).ready(function(){
 
                 vimeoPlayerObj.addEvent('ready', function() {
                     setTimeout(function(){
+/*
                         if(!util.chkMobile()){
                             vimeoPlayerObj.api('play');
                             $('#introVideo').hide();
                         }
-
+*/
                         $(videoWraper).addClass('init');
 
                         vimeoPlayerObj.addEvent('pause', onPause);
