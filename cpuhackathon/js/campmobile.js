@@ -227,12 +227,13 @@ $(document).ready(function(){
 
                 $('.videoPlayerIframe').remove();
 
-                if(!util.chkMobile()) $('#introVideo').show();
+            //    if(!util.chkMobile())
+            $('#introVideo').show();
 
-                if(util.chkMobile() && $('html').hasClass('iphone')){
-                    if(_this.attr('data-kind') === 'intro') $.fn.fullpage.moveTo('intro');
-                    else $.fn.fullpage.moveTo('people');
-                }
+            //    if(util.chkMobile() && $('html').hasClass('iphone')){
+              //      if(_this.attr('data-kind') === 'intro') $.fn.fullpage.moveTo('intro');
+        //            else $.fn.fullpage.moveTo('people');
+          //      }
 
                 _this.removeAttr('data-kind').removeClass('active init');
                 $('body').removeClass('touchDown');
@@ -261,7 +262,7 @@ $(document).ready(function(){
                 // fullpage.js 최신버전에서는 해결되었으나 #footer 섹션 처리 오류 발생으로 인해 버전업 X
                 introVideoControllTimer = setTimeout(function(){
                     // service > intro video 제어
-                    if(!util.chkMobile() && anchorLink === 'intro') {
+                    if(anchorLink === 'intro') {
                         $('#introVideo').trigger('play');
                     }else{
                         $('#introVideo').trigger('pause');
