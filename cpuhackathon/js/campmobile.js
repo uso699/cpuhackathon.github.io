@@ -215,12 +215,13 @@ $(document).ready(function(){
             },
             close: function(e){
                 var _this = $(e.target);
-
+/*
                 if(util.chkMobile() && !_this.hasClass('close')){
                     return false;
-                }else{
+                }else
+                */
                     _this = (!_this.hasClass('videoPlayerWrap')) ? _this.parents('.videoPlayerWrap') : _this ;
-                }
+
 
                 vimeoPlayerObj = null;
 
