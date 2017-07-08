@@ -340,9 +340,11 @@ $(document).ready(function(){
                 util.fullPageReBuild();
 
                 // service > intro video 제어
-                if(util.chkMobile()){
+            /*    if(util.chkMobile()){
                     $('#introVideo').trigger('pause');
-                }else if(window.location.hash === '#intro'){
+                }else
+                */
+                if(window.location.hash === '#intro'){
                     $('#introVideo').trigger('play');
                 }
             }
@@ -409,12 +411,13 @@ $(document).ready(function(){
 
     $(window).on('mousewheel DOMMouseScroll touchmove', function(e){
         if($('.videoPlayerWrap.active').length){
-            if(util.chkMobile()){
+          /*  if(util.chkMobile()){
                 e.preventDefault();
             }else{
+            */
                 if($(this).attr('data-kind') === 'intro') $.fn.fullpage.moveTo('intro');
                 else $.fn.fullpage.moveTo('people');
-            }
+
         }
     });
 
