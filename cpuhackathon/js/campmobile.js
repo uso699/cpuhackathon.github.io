@@ -458,7 +458,7 @@ window.matchMedia || (window.matchMedia = function() {
 
         styleMedia = {
             matchMedium: function(media) {
-                var text = '@media ' + media + '{ #matchmediajs-test { width: 1px; } }';
+                var text = '@media ' + media + '{ #matchmediajs-test { width: 740px; } }';
 
                 // 'style.styleSheet' is used by IE <= 8 and 'style.textContent' for all other browsers
                 if (style.styleSheet) {
@@ -468,7 +468,7 @@ window.matchMedia || (window.matchMedia = function() {
                 }
 
                 // Test if media query is true or false
-                return info.width === '1px';
+                return info.width === '740px';
             }
         };
     }
