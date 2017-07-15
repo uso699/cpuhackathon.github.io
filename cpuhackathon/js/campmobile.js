@@ -7,6 +7,7 @@ $(document).ready(function(){
         chkMobile: function(){
             return window.matchMedia('(max-width: 801px)').matches;
 
+
         },
 
         chkSmallHeight: function(){
@@ -234,13 +235,13 @@ $('#introVideo').hide();
 
                 $('.videoPlayerIframe').remove();
 
-            //    if(!util.chkMobile())
+          if(!util.chkMobile())
             $('#introVideo').show();
 
-            //    if(util.chkMobile() && $('html').hasClass('iphone')){
-              //      if(_this.attr('data-kind') === 'intro') $.fn.fullpage.moveTo('intro');
-        //            else $.fn.fullpage.moveTo('people');
-          //      }
+         if(util.chkMobile() && $('html').hasClass('iphone')){
+             if(_this.attr('data-kind') === 'intro') $.fn.fullpage.moveTo('intro');
+            else $.fn.fullpage.moveTo('people');
+         }
 
                 _this.removeAttr('data-kind').removeClass('active init');
                 $('body').removeClass('touchDown');
@@ -458,7 +459,7 @@ window.matchMedia || (window.matchMedia = function() {
 
         styleMedia = {
             matchMedium: function(media) {
-                var text = '@media ' + media + '{ #matchmediajs-test { width: 740px; } }';
+                var text = '@media ' + media + '{ #matchmediajs-test { width: 1px; } }';
 
                 // 'style.styleSheet' is used by IE <= 8 and 'style.textContent' for all other browsers
                 if (style.styleSheet) {
@@ -468,7 +469,7 @@ window.matchMedia || (window.matchMedia = function() {
                 }
 
                 // Test if media query is true or false
-                return info.width === '740px';
+                return info.width === '1px';
             }
         };
     }
