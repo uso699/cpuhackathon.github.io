@@ -6,6 +6,11 @@ $(document).ready(function(){
 
         chkMobile: function(){
             return window.matchMedia('(max-width: 740px)').matches;
+
+        },
+
+        chkSmallHeight: function(){
+          return window.matchMedia('(max-height: 740px)').matches;
         },
 
         setAutoScrollingOff : function(){
@@ -19,6 +24,7 @@ $(document).ready(function(){
                 $.fn.fullpage.setFitToSection(true);
             }
         },
+
 
         fullPageReBuild: function(){
             setTimeout(function(){
