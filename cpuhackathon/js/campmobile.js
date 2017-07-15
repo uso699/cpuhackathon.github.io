@@ -5,7 +5,7 @@ $(document).ready(function(){
         },
 
         chkMobile: function(){
-            return window.matchMedia('(max-width: 740px)').matches;
+            return window.matchMedia('(max-width: 801px)').matches;
 
         },
 
